@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="div1">
+        <h1>cours d'interaction de dom</h1>
+        <p>
+            <span>1</span>
+            <span id="monnom">kokpakpa</span>
+        </p>
+        <button onclick="functionrecupererduhtml()">recuperer</button>
+    </div>
+
+    <div id="div2">
+        <button onclick="functionrecupererduhtml()">afficher l'information recuperer</button>
+        <p id="div2"></p>
+    </div>
+
+    <div><button onmouseover=lasourisbouge()>on mouse</button></div>
+    <div><button onmouseout=lasourissort()>on sort de la zone</button></div>
+
+    <div><input type="text" onchange="lavaleurchange()"id="kokpakpa"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
