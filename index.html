@@ -1,32 +1,713 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>boko web</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Carewell Hospital : des soins médicaux de qualité, une équipe experte et un accompagnement personnalisé.">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Carewell Hospital | Votre santé, notre priorité</title>
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="div1">
-        <h1>cours d'interaction de dom</h1>
-        <p>
-            <span>1</span>
-            <span id="monnom">kokpakpa</span>
-        </p>
-        <button onclick="functionrecupererduhtml()">recuperer</button>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header" id="header">
+
+        <div class="container navbar">
+
+            <!-- LOGO -->
+            <a href="#accueil" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-staff-snake"></i>
+                </span>
+
+                <span class="logo-text">
+                    <strong>CAREWELL</strong>
+                    <small>HOSPITAL</small>
+                </span>
+
+            </a>
+
+            <!-- MENU DE NAVIGATION -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#accueil" class="nav-link active">Accueil</a>
+
+                <a href="#apropos" class="nav-link">À propos</a>
+
+                <a href="#services" class="nav-link">Services</a>
+
+                <a href="#specialites" class="nav-link">Spécialités</a>
+
+                <a href="#patients" class="nav-link">Patients</a>
+
+                <a href="#medecins" class="nav-link">Médecins</a>
+
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </nav>
+
+            <!-- BOUTON RENDEZ-VOUS -->
+            <button class="appointment-btn header-btn" id="openAppointment">
+
+                <i class="fa-regular fa-calendar-check"></i>
+
+                Prendre rendez-vous
+
+            </button>
+
+            <!-- MENU MOBILE -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Ouvrir le menu"
+                    aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <div class="container hero-container">
+
+                <!-- PARTIE GAUCHE -->
+                <div class="hero-content">
+
+                    <span class="hero-subtitle">
+
+                        <span class="subtitle-line"></span>
+
+                        DES SOINS EXPERTS. À CHAQUE INSTANT.
+
+                    </span>
+
+                    <h1>
+                        Des soins attentionnés.
+                        <span>Un avenir en meilleure santé.</span>
+                    </h1>
+
+                    <div class="title-line"></div>
+
+                    <p class="hero-description">
+
+                        Technologie avancée. Médecins expérimentés.
+                        Soins personnalisés. Nous sommes à vos côtés,
+                        à chaque étape de votre parcours de santé.
+
+                    </p>
+
+                    <button class="appointment-btn hero-btn"
+                            id="heroAppointment">
+
+                        Prendre rendez-vous
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- LES 4 AVANTAGES -->
+                    <div class="advantages" id="apropos">
+
+                        <div class="advantage">
+
+                            <div class="advantage-icon">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+
+                            <h3>Patient d'abord</h3>
+
+                            <p>
+                                Votre santé et votre bien-être
+                                sont notre priorité.
+                            </p>
+
+                        </div>
+
+
+                        <div class="advantage">
+
+                            <div class="advantage-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <h3>Équipe experte</h3>
+
+                            <p>
+                                Des médecins qualifiés et
+                                un personnel dévoué.
+                            </p>
+
+                        </div>
+
+
+                        <div class="advantage">
+
+                            <div class="advantage-icon">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+
+                            <h3>Soins avancés</h3>
+
+                            <p>
+                                Des équipements modernes
+                                et des soins de qualité.
+                            </p>
+
+                        </div>
+
+
+                        <div class="advantage">
+
+                            <div class="advantage-icon">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <h3>Assistance 24/7</h3>
+
+                            <p>
+                                Une assistance disponible
+                                lorsque vous en avez besoin.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PARTIE DROITE : IMAGE -->
+                <div class="hero-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1100&q=90"
+                        alt="Médecin professionnelle de Carewell Hospital"
+                    >
+
+                    <div class="hospital-watermark">
+
+                        <div class="watermark-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                        <h2>CAREWELL</h2>
+
+                        <p>HOSPITAL</p>
+
+                    </div>
+
+                    <div class="image-label">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Des professionnels à votre écoute
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTIQUES ================= -->
+
+        <section class="statistics" id="patients">
+
+            <div class="container statistics-container">
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <div class="stat-text">
+
+                        <span class="stat-label">Ils nous font confiance</span>
+
+                        <h2 class="counter" data-target="50000">0</h2>
+
+                        <p>Patients accompagnés</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+
+                    <div class="stat-text">
+
+                        <span class="stat-label">Notre équipe</span>
+
+                        <h2 class="counter" data-target="250">0</h2>
+
+                        <p>Médecins experts</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+
+                    <div class="stat-text">
+
+                        <span class="stat-label">Nos installations</span>
+
+                        <h2 class="counter" data-target="20">0</h2>
+
+                        <p>Départements</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <div class="stat-text">
+
+                        <span class="stat-label">Notre expérience</span>
+
+                        <h2 class="counter" data-target="15">0</h2>
+
+                        <p>Années d'excellence</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="statistics-message">
+
+                    <h3>
+                        Votre santé.<br>
+                        Notre engagement.
+                    </h3>
+
+                    <p>
+                        Ensemble, construisons un avenir
+                        plus sain.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section class="services-section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>CE QUE NOUS FAISONS</span>
+
+                    <h2>Nos services médicaux</h2>
+
+                    <p>
+                        Des soins adaptés à vos besoins,
+                        avec une équipe attentive et expérimentée.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-stethoscope"></i>
+
+                        <h3>Consultation générale</h3>
+
+                        <p>
+                            Un suivi médical personnalisé
+                            pour préserver votre santé.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-truck-medical"></i>
+
+                        <h3>Urgences médicales</h3>
+
+                        <p>
+                            Une prise en charge rapide
+                            en cas de situation urgente.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                        <h3>Laboratoire</h3>
+
+                        <p>
+                            Des analyses médicales
+                            réalisées avec précision.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-baby"></i>
+
+                        <h3>Maternité</h3>
+
+                        <p>
+                            Un accompagnement attentif
+                            pour les mamans et les bébés.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SPÉCIALITÉS ================= -->
+
+        <section class="specialties-section" id="specialites">
+
+            <div class="container specialties-content">
+
+                <div>
+                    <span class="section-kicker">NOTRE EXPERTISE</span>
+
+                    <h2>Des spécialités pour chaque besoin.</h2>
+
+                    <p>
+                        Notre établissement propose plusieurs
+                        domaines de prise en charge médicale.
+                    </p>
+                </div>
+
+                <div class="specialty-list">
+
+                    <span><i class="fa-solid fa-check"></i> Cardiologie</span>
+
+                    <span><i class="fa-solid fa-check"></i> Pédiatrie</span>
+
+                    <span><i class="fa-solid fa-check"></i> Gynécologie</span>
+
+                    <span><i class="fa-solid fa-check"></i> Dermatologie</span>
+
+                    <span><i class="fa-solid fa-check"></i> Chirurgie</span>
+
+                    <span><i class="fa-solid fa-check"></i> Médecine générale</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MEDECINS ================= -->
+
+        <section class="doctors-section" id="medecins">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>NOTRE ÉQUIPE</span>
+
+                    <h2>Des professionnels à votre service</h2>
+
+                    <p>
+                        Une équipe médicale engagée pour
+                        votre santé et votre bien-être.
+                    </p>
+
+                </div>
+
+                <div class="doctor-message">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    <h3>Une équipe médicale expérimentée</h3>
+
+                    <p>
+                        Découvrez les professionnels qui
+                        vous accompagnent au quotidien.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="container contact-container">
+
+                <div>
+
+                    <span class="section-kicker">RESTONS EN CONTACT</span>
+
+                    <h2>Nous sommes là pour vous.</h2>
+
+                    <p>
+                        Pour toute information sur nos services,
+                        notre équipe est à votre disposition.
+                    </p>
+
+                </div>
+
+                <button class="appointment-btn"
+                        id="contactAppointment">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    Demander un rendez-vous
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#accueil" class="logo footer-logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-staff-snake"></i>
+                </span>
+
+                <span class="logo-text">
+                    <strong>CAREWELL</strong>
+                    <small>HOSPITAL</small>
+                </span>
+
+            </a>
+
+            <p>
+                Votre santé, notre priorité.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © <span id="currentYear"></span> Carewell Hospital.
+                Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= FENÊTRE RENDEZ-VOUS ================= -->
+
+    <div class="modal" id="appointmentModal"
+         aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button class="modal-close"
+                    id="closeAppointment"
+                    aria-label="Fermer">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <div class="modal-heading">
+
+                <i class="fa-regular fa-calendar-check"></i>
+
+                <h2>Prendre rendez-vous</h2>
+
+                <p>
+                    Remplissez les informations ci-dessous.
+                </p>
+
+            </div>
+
+
+            <form id="appointmentForm">
+
+                <div class="form-group">
+
+                    <label for="patientName">Nom complet</label>
+
+                    <input type="text"
+                           id="patientName"
+                           name="patientName"
+                           placeholder="Votre nom complet"
+                           required
+                           minlength="2">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="patientEmail">Adresse e-mail</label>
+
+                    <input type="email"
+                           id="patientEmail"
+                           name="patientEmail"
+                           placeholder="exemple@email.com"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="patientPhone">Téléphone</label>
+
+                    <input type="tel"
+                           id="patientPhone"
+                           name="patientPhone"
+                           placeholder="Votre numéro de téléphone"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="department">Service souhaité</label>
+
+                    <select id="department"
+                            name="department"
+                            required>
+
+                        <option value="">Choisir un service</option>
+
+                        <option>Consultation générale</option>
+
+                        <option>Cardiologie</option>
+
+                        <option>Pédiatrie</option>
+
+                        <option>Gynécologie</option>
+
+                        <option>Dermatologie</option>
+
+                        <option>Autre service</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentDate">Date souhaitée</label>
+
+                    <input type="date"
+                           id="appointmentDate"
+                           name="appointmentDate"
+                           required>
+
+                </div>
+
+
+                <button type="submit" class="appointment-btn submit-btn">
+
+                    Envoyer ma demande
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+                <p class="form-notice" id="formNotice" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+
     </div>
 
-    <div id="div2">
-        <button onclick="functionrecupererduhtml()">afficher l'information recuperer</button>
-        <p id="div2"></p>
-    </div>
 
-    <div><button onmouseover=lasourisbouge()>on mouse</button></div>
-    <div><button onmouseout=lasourissort()>on sort de la zone</button></div>
-
-    <div><input type="text" onchange="lavaleurchange()"id="kokpakpa"></div>
-    
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
